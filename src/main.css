@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: local('Gilroy-Bold'), url(./fonts/Gilroy-Bold.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Gilroy-Medium';
+    src: local('Gilroy-Medium'), url(./fonts/Gilroy-Medium.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Gilroy-Light';
+    src: local('Gilroy-Light'), url(./fonts/Gilroy-Light.ttf) format('truetype');
+  }
+
+
+  
+
+  /* .container {
+    position: static;
+    height: '50px';
+  }
+  
+  .bottomright {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 18px;
+  }
+  
+  img { 
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+  } */
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    /* animation: myfirst 3s 1;
+    animation-direction: reverse; */
+
+  }
+  /* .animationLayerTest{
+    animation: myfirst 3s 1;
+    animation-direction: reverse;
+  } */
+  .main-image {
+    border-radius: 15px; /* Adjust the curvature as needed */
+    display: block;
+    height: 350px;
+    width: 350px;
+  }
+  
+  .arrow-image {
+    position: absolute;
+    right: 10px; /* Adjust the position as needed */
+    bottom: 10px; /* Adjust the position as needed */
+    width: 64px; /* Adjust the size as needed */
+    height: 64px;
+  }
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 5%;
+    overflow: hidden ;
+  
+  }
+  .AnimateWith{
+    opacity: 0;
+    transform: translateY(100%); /* Start below the container */
+    animation: moveUp 1s forwards; 
+  }
+  @keyframes moveUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes myfirst {
+    25%  { left: 0px; top: 0px;}
+    50%  { left: 0px; top: 200px;}
+  
+  }
+  @media (max-width: 600px) {
+    .flex-container {
+      flex-direction: column; /* Ensures flex direction stays as row on small screens */
+    }
+  }

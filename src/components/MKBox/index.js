@@ -22,12 +22,14 @@ import PropTypes from "prop-types";
 import MKBoxRoot from "components/MKBox/MKBoxRoot";
 
 const MKBox = forwardRef(
-  ({ variant, bgColor, color, opacity, borderRadius, shadow, coloredShadow, ...rest }, ref) => (
+  ({ variant, bgColor, color, opacity, borderRadius, shadow, coloredShadow, sx, ...rest }, ref) => (
     <MKBoxRoot
       {...rest}
       ref={ref}
+      sx={sx}
       ownerState={{ variant, bgColor, color, opacity, borderRadius, shadow, coloredShadow }}
     />
+    
   )
 );
 
@@ -61,6 +63,7 @@ MKBox.propTypes = {
     "dark",
     "none",
   ]),
+  sx: PropTypes.object,
 };
 
 export default MKBox;
