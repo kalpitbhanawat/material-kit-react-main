@@ -92,9 +92,9 @@ function Presentation() {
   <Offerings>
 
   </Offerings>
-  {/* <CarPage>
+  <CarPage>
 
-  </CarPage> */}
+  </CarPage>
       {/* <MKBox pt={6} px={1} mt={6}> */}
         <DefaultFooter content={footerRoutes} />
       {/* </MKBox> */}

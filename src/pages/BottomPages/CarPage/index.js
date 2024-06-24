@@ -12,11 +12,36 @@ import React, { useEffect, useRef, useState } from 'react';
 function CarPage() {
     return(
         <>
-<div class="car-container">
-    <img src={carImage} className="bottomImage" />
-    <Typography style={{ fontFamily: 'Gilroy-meduim, sans-serif', fontSize:'40px' }} class="textAboveCar">Intelligent Logistics for a Greener Tomorrow</Typography>
-    <img src={carImage} className="topImage"/>
-</div>
+        <MKBox
+        className="bottomImage"
+        minHeight="100vh"
+        width="100%"
+        sx={{
+          backgroundImage: `url(${carImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "grid",
+          placeItems: "center",
+        }}>    
+      </MKBox>
+      <Typography style={{ fontFamily: 'Gilroy-meduim, sans-serif', fontSize:'40px' }} class="textAboveCar">Intelligent Logistics for a Greener Tomorrow</Typography>
+{/* <div class="car-container"> */}
+<MKBox
+        className="topImage"
+        minHeight="100vh"
+        width="100%"
+        sx={{
+          backgroundImage: `url(${carImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "grid",
+          placeItems: "center",
+        }}>    
+      </MKBox>
+    {/* <img src={carImage} className="bottomImage" />
+    
+    <img src={carImage} className="topImage"/> */}
+{/* </div> */}
 
         </>
     )
