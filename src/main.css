@@ -131,44 +131,39 @@
 
 
 .car-container {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  /* background-image: url('your-image-url.jpg'); */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  display: grid;
+  grid-template-areas: 'overlap';
   /* background-image: url(../src/assets/images/carImage.png); */
 }
 
 .bottomImage, .topImage {
-  position:absolute;
-  background-size: cover;
-  height: auto;
-  width:100%;
+  grid-area: overlap;
+ 
   
 }
 
 .bottomImage {
-  top: 0;
-  left: 0;
+  z-index: 2;
 }
 
 .topImage {
-  top: 0px; /* adjust as needed */
-  left: 0px; /* adjust as needed */
+  z-index: 2;
   /* background-image: url(../src/assets/images/carImage.png); */
   clip-path: polygon(40% 41%, 27% 42%, 18% 54%, 17% 65%, 21% 72%, 33% 70%, 54% 73%, 94% 72%, 94% 52%, 76% 46%, 59% 40%, 42% 39%)
 }
 
 .textAboveCar {
-  position: absolute;
+  /* position: absolute;
  margin-top:21.4%;
  right: 7%;
  left: 7%;
-  /* transform: translate(50%, 50%); */
   font-size: 24px;
   color: white;
-  text-align: center;
+  text-align: center; */
+  z-index: 2;
+            align-self: center; /* Center vertically */
+            justify-self: center; /* Center horizontally */
+            color: white;
+            font-size: 24px;
+            text-align: center;
 }

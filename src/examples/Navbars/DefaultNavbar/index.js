@@ -53,8 +53,55 @@ const Navbar = () => {
               {item.label}
             </Button>
           ))}
-          <Button variant="outlined" color="primary" sx={{ marginLeft: '10px' }}>Client Login</Button>
-          <Button variant="contained" color="primary" sx={{ marginLeft: '10px' }}>Get in touch</Button>
+           <Button 
+    variant="outlined"
+    style={{ fontFamily: 'Gilroy-meduim, sans-serif' }}
+       sx={{
+        height:'24px',
+        borderRadius: '50px', // Adjust the value for different levels of roundness
+        padding: '10px 20px',
+        borderColor:'#07BB8F',
+        borderBlockColor:'#07BB8F',
+        color:'black'
+      }}
+      >
+        <Typography style={{ fontFamily: 'Gilroy-meduim, sans-serif' ,color:'black' }}
+       fontSize={'14px'}
+       padding={0}
+       textTransform ='none'
+       >
+        Client Login
+        </Typography>
+
+    </Button>
+             <Button 
+    // variant="outlined"
+    style={{ fontFamily: 'Gilroy-meduim, sans-serif' ,paddingTop:'10px'}}
+       sx={{
+        marginLeft:'10px',
+        height:'24px',
+        borderRadius: '50px', // Adjust the value for different levels of roundness
+        padding: '10px 20px',
+        background:'#07BB8F',
+        // borderBlockColor:'#07BB8F',
+        color:'black',
+        transform:'none',
+        '&:hover': {
+          backgroundColor: '#07BB8F', // Same as default background color
+          color: 'white', 
+          border: '#07BB8F'    // Same as default text color
+        },
+      }}
+      >
+        <Typography style={{ fontFamily: 'Gilroy-meduim, sans-serif' ,color:'#FFFFFF' }}
+       fontSize={'14px'}
+       padding={0}
+       textTransform ='none'
+       >
+        Get In Touch
+        </Typography>
+
+    </Button>
         </Box>
         <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
           <IconButton

@@ -13,106 +13,148 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// react-router-dom components
-import { Link } from "react-router-dom";
-
-// prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";
-
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
+import MKButton from "components/MKButton";
 
-function DefaultFooter({ content }) {
-  const { brand, socials, menus, copyright } = content;
+// Material Kit 2 React examples
+import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+// import DefaultFooter from "examples/Footers/DefaultFooter";
 
+// About Us page sections
+import Information from "pages/LandingPages/AboutUs/sections/Information";
+import Team from "pages/LandingPages/AboutUs/sections/Team";
+import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
+import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
+
+// Routes
+import routes from "routes";
+import footerRoutes from "footer.routes";
+
+// Images
+import bgImage from "assets/images/bg-about-us.jpg";
+
+import '../../../main.css'
+import autoCurved from '../../../assets/images/autoCurved.png'
+import meterCurved from '../../../assets/images/MeterCurved.png'
+import laptopCurved from '../../../assets/images/laptopCurved.png'
+import greenButton from '../../../assets/images/greenButton.png'
+import greyButton from '../../../assets/images/greyButton.png'
+import { Typography } from "@mui/material";
+import logoImage from "assets/images/logo.svg";
+import { Button } from "@mui/material";
+function DefaultFooter() {
+  let data = [
+    'About', 'Logistics', 'Informatics', 'ChargeGrid', 'Careers', 'Our Story'
+  ]
+  // const [isMobileView, setIsMobileView] = useState(false);
+
+  // useEffect(() => {
+  //   let resizeTimer;
+  //   const handleResize = (result) => {
+  //     console.log("here result is", result)
+  //     clearTimeout(resizeTimer);
+  //     resizeTimer = setTimeout(() => {
+  //       setIsMobileView(window.innerWidth <= 768);
+  //     }, 300);
+  //   };
+
+  //   window.addEventListener('resize', handleResize);
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //     clearTimeout(resizeTimer);
+  //   };
+  // }, []);
   return (
-    <MKBox component="footer">
-      <Container>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={3} sx={{ ml: "auto", mb: 3 }}>
-            <MKBox>
-              <Link to={brand.route}>
-                <MKBox component="img" src={brand.image} alt={brand.name} maxWidth="2rem" mb={2} />
-              </Link>
-              <MKTypography variant="h6">{brand.name}</MKTypography>
-            </MKBox>
-            <MKBox display="flex" alignItems="center" mt={3}>
-              {socials.map(({ icon, link }, key) => (
-                <MKTypography
-                  key={link}
-                  component="a"
-                  href={link}
-                  target="_blank"
-                  rel="noreferrer"
-                  variant="h5"
-                  color="dark"
-                  opacity={0.8}
-                  mr={key === socials.length - 1 ? 0 : 2.5}
-                >
-                  {icon}
-                </MKTypography>
-              ))}
-            </MKBox>
-          </Grid>
-          {menus.map(({ name: title, items }) => (
-            <Grid key={title} item xs={6} md={2} sx={{ mb: 3 }}>
-              <MKTypography
-                display="block"
-                variant="button"
-                fontWeight="bold"
-                textTransform="capitalize"
-                mb={1}
+    <>
+     
+
+
+      <div className="flex-container">
+        {/* <div className="AnimateWith"> */}
+        {/* <div class="image-container"> */}
+        <div style={{ display: 'flex' }}>
+          <img src={logoImage} alt="al" style={{ height: '30px', marginRight: '10px' }} />
+          <Typography variant="h6" color="inherit" component="div" sx={{ flexGrow: 1 }}>
+            altron
+          </Typography>
+        </div>
+        <div >
+          <div >
+
+            {data.map((item, index) => (
+              <Typography
+                key={index}
+                style={{ fontFamily: 'Gilroy-meduim, sans-serif' }}
+                fontSize={'24px'}
               >
-                {title}
-              </MKTypography>
-              <MKBox component="ul" p={0} m={0} sx={{ listStyle: "none" }}>
-                {items.map(({ name, route, href }) => (
-                  <MKBox key={name} component="li" p={0} m={0} lineHeight={1.25}>
-                    {href ? (
-                      <MKTypography
-                        component="a"
-                        href={href}
-                        target="_blank"
-                        rel="noreferrer"
-                        variant="button"
-                        fontWeight="regular"
-                        textTransform="capitalize"
-                      >
-                        {name}
-                      </MKTypography>
-                    ) : (
-                      <MKTypography
-                        component={Link}
-                        to={route}
-                        variant="button"
-                        fontWeight="regular"
-                        textTransform="capitalize"
-                      >
-                        {name}
-                      </MKTypography>
-                    )}
-                  </MKBox>
-                ))}
-              </MKBox>
-            </Grid>
-          ))}
-          <Grid item xs={12} sx={{ textAlign: "center", my: 3 }}>
-            {copyright}
-          </Grid>
-        </Grid>
-      </Container>
-    </MKBox>
+                {item}
+              </Typography>
+            ))}
+            {/* <img src={laptopCurved} alt="Curved Image" class="main-image"/> */}
+
+            {/*  
+        <img className="image1" src={greenButton} alt="First Image"/>
+        <img className="image2" src={greyButton} alt="Second Image"/> */}
+
+
+          </div>
+
+
+        </div>
+        <div style={{width:'24%'}}>
+        <Typography
+                style={{ fontFamily: 'Gilroy-meduim, sans-serif' }}
+                fontSize={'24px'}
+              >
+               Want to Connect and Partner for Success ?
+              </Typography>
+              <Button 
+    variant="outlined"
+    style={{ fontFamily: 'Gilroy-meduim, sans-serif' ,paddingTop:'10px'}}
+       sx={{
+        borderRadius: '50px', // Adjust the value for different levels of roundness
+        padding: '10px 20px',
+        background:'#07BB8F',
+        // borderBlockColor:'#07BB8F',
+        color:'black',
+        transform:'none',
+        '&:hover': {
+          backgroundColor: '#07BB8F', // Same as default background color
+          color: 'white',          // Same as default text color
+        },
+      }}
+      >
+        <Typography style={{ fontFamily: 'Gilroy-meduim, sans-serif' ,color:'#FFFFFF' }}
+       fontSize={'14px'}
+       padding={0}
+       textTransform ='none'
+       >
+        Enquire Now
+        </Typography>
+
+    </Button>
+          {/* <div className="image-container">
+          </div> */}
+          {/* <Typography style={{ fontFamily: 'Gilroy-Bold, sans-serif',width:'350px' }} fontSize={'24px'}>
+ChangeGrid
+  </Typography>
+  
+  <Typography style={{ fontFamily: 'Gilroy-meduim, sans-serif',width:'350px',color:'#535353' }} fontSize={'20px'}>
+  Aligning with global push towards cleaner, greener & sustainable energy practices
+  </Typography> */}
+        </div>
+
+      </div>
+<br/>
+    </>
   );
 }
-
-// Typechecking props for the DefaultFooter
-DefaultFooter.propTypes = {
-  content: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.object, PropTypes.array])).isRequired,
-};
 
 export default DefaultFooter;

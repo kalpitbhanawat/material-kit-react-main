@@ -28,6 +28,7 @@ import Presentation from "layouts/pages/presentation";
 
 // Material Kit 2 React routes
 import routes from "routes";
+import Typography from "layouts/sections/elements/typography/components/TypographyRoboto";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -59,6 +60,7 @@ export default function App() {
         <Route path="/presentation" element={<Presentation />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
       </Routes>
+      {/* <Typography>dcd</Typography> */}
     </ThemeProvider>
   );
 }

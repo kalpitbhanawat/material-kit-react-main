@@ -60,7 +60,7 @@ function Presentation() {
       </div>
   
       <div style={{position:'absolute'  ,top: '40%',
-  left: '20px',
+  left: '7%',
   width: '40%',
   height: '100px'}}>
     <Typography style={{ fontFamily: 'Gilroy-meduim, sans-serif' }} fontSize={'40px'}>
@@ -92,12 +92,12 @@ function Presentation() {
   <Offerings>
 
   </Offerings>
-  <CarPage>
+  {/* <CarPage>
 
-  </CarPage>
-      {/* <MKBox pt={6} px={1} mt={6}>
+  </CarPage> */}
+      {/* <MKBox pt={6} px={1} mt={6}> */}
         <DefaultFooter content={footerRoutes} />
-      </MKBox> */}
+      {/* </MKBox> */}
     </>
   );
 }
