@@ -64,6 +64,7 @@
     justify-content: space-between;
     flex-direction: row;
     padding: 5%;
+    padding-top: 0;
     overflow: hidden ;
   
   }
@@ -71,6 +72,7 @@
     opacity: 0;
     transform: translateY(100%); /* Start below the container */
     animation: moveUp 1s forwards; 
+    align-self: center;
   }
   @keyframes moveUp {
     to {
@@ -83,8 +85,90 @@
     50%  { left: 0px; top: 200px;}
   
   }
-  @media (max-width: 600px) {
+  @media (max-width: 1200px) {
     .flex-container {
       flex-direction: column; /* Ensures flex direction stays as row on small screens */
     }
   }
+
+
+
+  .image1, .image2 {
+    position: absolute;
+    right: 10px; /* Adjust the position as needed */
+    bottom: -10px; /* Adjust the position as needed */
+    width: 64px; /* Adjust the size as needed */
+    height: 64px;
+    transition: all 0.5s ease;
+}
+
+.image1 {
+    z-index: 2;
+}
+
+.image2 {
+    transform: translate(-100%, 100%);
+    opacity: 0;
+    z-index: 1;
+}
+
+.image1:hover {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.image1:hover + .image2 {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+
+
+
+/* clip-path: polygon(34% 39%, 61% 39%, 88% 49%, 92% 52%, 100% 100%, 0 100%, 19% 52%, 26% 42%); */
+
+
+
+.car-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* background-image: url('your-image-url.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* background-image: url(../src/assets/images/carImage.png); */
+}
+
+.bottomImage, .topImage {
+  position:absolute;
+  background-size: cover;
+  height: auto;
+  width:100%;
+  
+}
+
+.bottomImage {
+  top: 0;
+  left: 0;
+}
+
+.topImage {
+  top: 0px; /* adjust as needed */
+  left: 0px; /* adjust as needed */
+  /* background-image: url(../src/assets/images/carImage.png); */
+  clip-path: polygon(40% 41%, 27% 42%, 18% 54%, 17% 65%, 21% 72%, 33% 70%, 54% 73%, 94% 72%, 94% 52%, 76% 46%, 59% 40%, 42% 39%)
+}
+
+.textAboveCar {
+  position: absolute;
+ margin-top:21.4%;
+ right: 7%;
+ left: 7%;
+  /* transform: translate(50%, 50%); */
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}

@@ -10,6 +10,7 @@ import footerRoutes from "footer.routes";
 import bgImage from "assets/images/truckGif.gif";
 import { useEffect, useState } from "react";
 import Offerings from "pages/BottomPages/OfferingsPage";
+import CarPage from "pages/BottomPages/CarPage";
 
 function Presentation() {
   const [isMobileView, setIsMobileView] = useState(false);
@@ -20,7 +21,7 @@ function Presentation() {
       console.log("here result is", result)
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
-        setIsMobileView(window.innerWidth <= 1000);
+        setIsMobileView(window.innerWidth <= 1350);
       }, 300);
     };
 
@@ -91,9 +92,12 @@ function Presentation() {
   <Offerings>
 
   </Offerings>
-      <MKBox pt={6} px={1} mt={6}>
+  <CarPage>
+
+  </CarPage>
+      {/* <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
-      </MKBox>
+      </MKBox> */}
     </>
   );
 }

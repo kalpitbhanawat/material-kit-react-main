@@ -44,6 +44,8 @@ import '../../../main.css'
 import autoCurved from '../../../assets/images/autoCurved.png'
 import meterCurved from '../../../assets/images/MeterCurved.png'
 import laptopCurved from '../../../assets/images/laptopCurved.png'
+import greenButton from '../../../assets/images/greenButton.png'
+import greyButton from '../../../assets/images/greyButton.png'
 import { Typography } from "@mui/material";
 function Offerings() {
   let data=[
@@ -95,7 +97,8 @@ function Offerings() {
   <div className="AnimateWith">
 <div class="image-container">
   <img src={autoCurved} alt="Curved Image" class="main-image"/>
-  <img src={autoCurved} alt="Arrow" class="arrow-image"/>
+  <img className="image1" src={greenButton} alt="First Image"/>
+        <img className="image2" src={greyButton} alt="Second Image"/>
   
 </div>
 <Typography style={{ fontFamily: 'Gilroy-Bold, sans-serif' }} fontSize={'24px'}>
@@ -106,10 +109,14 @@ function Offerings() {
   Contributing to cleaner air & reduced greenhouse gas emissions in urban areas.
   </Typography>
 </div>
-<div>
+<div className="AnimateWith">
 <div class="image-container">
   <img src={laptopCurved} alt="Curved Image" class="main-image"/>
-  <img src={autoCurved} alt="Arrow" class="arrow-image"/>
+ 
+ 
+        <img className="image1" src={greenButton} alt="First Image"/>
+        <img className="image2" src={greyButton} alt="Second Image"/>
+    
   
 </div>
 <Typography style={{ fontFamily: 'Gilroy-Bold, sans-serif' }} fontSize={'24px'}>
@@ -120,10 +127,11 @@ Informatics
   Data-driven dashboard optimizes end-to-end delivery & fleet management.
   </Typography>
 </div>
-<div>
-<div class="image-container">
+<div className="AnimateWith">
+<div className="image-container">
   <img src={meterCurved} alt="Curved Image" class="main-image"/>
-  <img src={autoCurved} alt="Arrow" class="arrow-image"/>
+  <img className="image1" src={greenButton} alt="First Image"/>
+        <img className="image2" src={greyButton} alt="Second Image"/>
   
 </div>
 <Typography style={{ fontFamily: 'Gilroy-Bold, sans-serif',width:'350px' }} fontSize={'24px'}>
@@ -134,7 +142,9 @@ ChangeGrid
   Aligning with global push towards cleaner, greener & sustainable energy practices
   </Typography>
 </div>
+
 </div>
+
     </>
   );
 }
