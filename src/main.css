@@ -63,7 +63,8 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-top: 0;
     overflow: hidden ;
   

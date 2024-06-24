@@ -74,19 +74,19 @@ function DefaultFooter() {
   return (
     <>
      
-
+<br/>
 
       <div className="flex-container">
         {/* <div className="AnimateWith"> */}
         {/* <div class="image-container"> */}
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex' ,width:'350px'}}>
           <img src={logoImage} alt="al" style={{ height: '30px', marginRight: '10px' }} />
           <Typography variant="h6" color="inherit" component="div" sx={{ flexGrow: 1 }}>
             altron
           </Typography>
         </div>
-        <div >
-          <div >
+
+        <div style={{width:'350px'}} >
 
             {data.map((item, index) => (
               <Typography
@@ -102,13 +102,9 @@ function DefaultFooter() {
             {/*  
         <img className="image1" src={greenButton} alt="First Image"/>
         <img className="image2" src={greyButton} alt="Second Image"/> */}
-
-
-          </div>
-
-
         </div>
-        <div style={{width:'24%'}}>
+
+        <div style={{width:'350px'}}>
         <Typography
                 style={{ fontFamily: 'Gilroy-meduim, sans-serif' }}
                 fontSize={'24px'}
